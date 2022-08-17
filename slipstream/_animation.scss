@@ -1,25 +1,25 @@
-$animation-fade-in: fade-in .5s var(--ease-3);
-$animation-fade-in-bloom: fade-in-bloom 2s var(--ease-3);
-$animation-fade-out: fade-out .5s var(--ease-3);
-$animation-fade-out-bloom: fade-out-bloom 2s var(--ease-3);
-$animation-scale-up: scale-up .5s var(--ease-3);
-$animation-scale-down: scale-down .5s var(--ease-3);
-$animation-slide-out-up: slide-out-up .5s var(--ease-3);
-$animation-slide-out-down: slide-out-down .5s var(--ease-3);
-$animation-slide-out-right: slide-out-right .5s var(--ease-3);
-$animation-slide-out-left: slide-out-left .5s var(--ease-3);
-$animation-slide-in-up: slide-in-up .5s var(--ease-3);
-$animation-slide-in-down: slide-in-down .5s var(--ease-3);
-$animation-slide-in-right: slide-in-right .5s var(--ease-3);
-$animation-slide-in-left: slide-in-left .5s var(--ease-3);
-$animation-shake-x: shake-x .75s var(--ease-out-5);
-$animation-shake-y: shake-y .75s var(--ease-out-5);
-$animation-spin: spin 2s linear infinite;
-$animation-ping: ping 5s var(--ease-out-3) infinite;
-$animation-blink: blink 1s var(--ease-out-3) infinite;
-$animation-float: float 3s var(--ease-in-out-3) infinite;
-$animation-bounce: bounce 2s var(--ease-squish-2) infinite;
-$animation-pulse: pulse 2s var(--ease-out-3) infinite;
+$animation-fade-in: fade-in $duration-faster $easing-3;
+$animation-fade-in-bloom: fade-in-bloom $duration-slow $easing-3;
+$animation-fade-out: fade-out $duration-faster $easing-3;
+$animation-fade-out-bloom: fade-out-bloom $duration-slow $easing-3;
+$animation-scale-up: scale-up $duration-faster $easing-3;
+$animation-scale-down: scale-down $duration-faster $easing-3;
+$animation-slide-out-up: slide-out-up $duration-faster $easing-3;
+$animation-slide-out-down: slide-out-down $duration-faster $easing-3;
+$animation-slide-out-right: slide-out-right $duration-faster $easing-3;
+$animation-slide-out-left: slide-out-left $duration-faster $easing-3;
+$animation-slide-in-up: slide-in-up $duration-faster $easing-3;
+$animation-slide-in-down: slide-in-down $duration-faster $easing-3;
+$animation-slide-in-right: slide-in-right $duration-faster $easing-3;
+$animation-slide-in-left: slide-in-left $duration-faster $easing-3;
+$animation-shake-x: shake-x $duration-fast $easing-out-5;
+$animation-shake-y: shake-y $duration-fast $easing-out-5;
+$animation-spin: spin $duration-slow linear infinite;
+$animation-ping: ping $duration-crawling $easing-out-3 infinite;
+$animation-blink: blink $duration-regular $easing-out-3 infinite;
+$animation-float: float $duration-slower $easing-in-out-3 infinite;
+$animation-bounce: bounce $duration-slow $easing-squish-2 infinite;
+$animation-pulse: pulse $duration-slow $easing-out-3 infinite;
 
 @keyframes fade-in {
     to { opacity: 1 }
@@ -133,16 +133,16 @@ $animation-pulse: pulse 2s var(--ease-out-3) infinite;
 
 @media (prefers-color-scheme: dark) {
     @keyframes fade-in-bloom {
-        0% { opacity: 0; filter: brightness(1) blur(20px) }
-        10% { opacity: 1; filter: brightness(0.5) blur(10px) }
+        0% { opacity: 0; filter: brightness(1) blur(rem(20px)) }
+        10% { opacity: 1; filter: brightness(0.5) blur(rem(10px)) }
         100% { opacity: 1; filter: brightness(1) blur(0) }
     };
 }
 
 @media (prefers-color-scheme: dark) {
     @keyframes fade-out-bloom {
-        100% { opacity: 0; filter: brightness(1) blur(20px) }
-        10% { opacity: 1; filter: brightness(0.5) blur(10px) }
+        100% { opacity: 0; filter: brightness(1) blur(rem(20px)) }
+        10% { opacity: 1; filter: brightness(0.5) blur(rem(10px)) }
         0% { opacity: 1; filter: brightness(1) blur(0) }
     };
 }

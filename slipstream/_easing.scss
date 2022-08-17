@@ -1,0 +1,9 @@
+$easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+$easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+$easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+$duration-faster: 100ms;
+$duration-fast: 250ms;
+$duration-regular: 500ms;
+$duration-slow: 750ms;
+$duration-slower: 1000ms;
+$transition-colors: background-color, border-color, color, fill, stroke;
